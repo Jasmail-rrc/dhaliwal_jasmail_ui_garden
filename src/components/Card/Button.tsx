@@ -1,18 +1,32 @@
 import React from "react";
 import styled from "styled-components";
-import { ButtonProps } from "./Button.types";
+import { CardProps } from "./Button.types";
 
-const StyledButton = styled.button<{ disabled?: boolean }>`
-  padding: 10px 20px;
-  border-radius: 5px;
-  border: none;
-  background-color: ${(props) => (props.disabled ? "gray" : "#007bff")};
-  color: white;
-  cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
+const StyledCard = styled.div`
+  width: 280px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 `;
 
-const Button = ({ label, disabled = false }: ButtonProps) => {
-  return <StyledButton disabled={disabled}>{label}</StyledButton>;
+const CardTitle = styled.h3`
+  margin-top: 0;
+  color: #222;
+`;
+
+const CardDescription = styled.p`
+  color: #555;
+  line-height: 1.5;
+`;
+
+const Card = ({ title, description }: CardProps) => {
+  return (
+    <StyledCard>
+      <CardTitle>{title}</CardTitle>
+      <CardDescription>{description}</CardDescription>
+    </StyledCard>
+  );
 };
 
-export default Button;
+export default Card;

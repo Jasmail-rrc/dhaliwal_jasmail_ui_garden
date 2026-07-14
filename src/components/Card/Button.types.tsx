@@ -1,4 +1,4 @@
-export interface ButtonProps {
-  label: string;
-  disabled?: boolean;
+export interface CardProps {
+  title: string;
+  description: string;
 }

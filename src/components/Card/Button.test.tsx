@@ -1,12 +1,21 @@
+import React from "react";
 import { render, screen } from "@testing-library/react";
-import Button from "./Button";
+import Card from "./Button";
 
-test("button is visible", () => {
-  render(<Button label="Test Button" />);
-  expect(screen.getByText("Test Button")).toBeInTheDocument();
+test("card title is visible", () => {
+  render(
+    <Card title="Test Card" description="This is a test card description." />,
+  );
+
+  expect(screen.getByText("Test Card")).toBeInTheDocument();
 });
 
-test("button disabled state", () => {
-  render(<Button label="Disabled" disabled={true} />);
-  expect(screen.getByText("Disabled")).toBeInTheDocument();
+test("card description is visible", () => {
+  render(
+    <Card title="Test Card" description="This is a test card description." />,
+  );
+
+  expect(
+    screen.getByText("This is a test card description."),
+  ).toBeInTheDocument();
 });

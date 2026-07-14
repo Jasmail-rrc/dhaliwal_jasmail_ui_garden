@@ -1,23 +1,29 @@
 import React from "react";
-import logo from "./logo.svg";
+import Button from "./components/Button/Button";
+import Card from "./components/Card/Button";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Jasmail Singh UI Component Library</h1>
+
+        <h2>Button Component</h2>
+
+        <div className="component-row">
+          <Button label="Primary Button" />
+          <Button label="Disabled Button" disabled />
+        </div>
+
+        <h2>Card Component</h2>
+
+        <div className="component-row">
+          <Card
+            title="UI Garden Card"
+            description="This is a reusable Card component built with React and styled-components."
+          />
+        </div>
       </header>
     </div>
   );
