@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Jasmail Singh UI Component Library</h1>
-
+        <p>Jasmail</p>
         <h2>Button Component</h2>
 
         <div className="component-row">
