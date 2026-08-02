@@ -1,31 +1,39 @@
-import React from "react";
-import Button from "./components/Button/Button";
-import Card from "./components/Card/Button";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Navigation from "./components/Navigation";
+import Home from "./pages/Home";
+import Work from "./pages/Work";
+import Skills from "./pages/Skills";
+import Resources from "./pages/Resources";
+import DeveloperSetup from "./pages/DeveloperSetup";
 import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Jasmail Singh UI Component Library</h1>
-        <p>Jasmail</p
-        <h2>Button Component</h2>
+    <BrowserRouter>
+      <div className="app">
+        <header className="site-header">
+          <h1>Jasmail Singh Portfolio</h1>
+          <Navigation />
+        </header>
 
-        <div className="component-row">
-          <Button label="Primary Button" />
-          <Button label="Disabled Button" disabled />
+        <div className="page-container">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/work" element={<Work />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/resources" element={<Resources />} />
+            <Route path="/developer-setup" element={<DeveloperSetup />} />
+          </Routes>
         </div>
 
-        <h2>Card Component</h2>
-
-        <div className="component-row">
-          <Card
-            title="UI Garden Card"
-            description="This is a reusable Card component built with React and styled-components."
-          />
-        </div>
-      </header>
-    </div>
+        <footer className="site-footer">
+          <p>
+            © {new Date().getFullYear()} Jasmail Singh Dhaliwal. Built with
+            React and TypeScript.
+          </p>
+        </footer>
+      </div>
+    </BrowserRouter>
   );
 }
 

@@ -1,4 +1,4 @@
-# Coding Assignment 13 – UI Component Library
+# Coding Assignment 14 – Portfolio Website
 
 ## Student
 
@@ -8,25 +8,39 @@
 
 # Description
 
-This project demonstrates a React UI Component Library with automated code quality tools and CI/CD integration.
+This project is a React and TypeScript Portfolio Website built using the UI Component Library created in previous assignments.
 
-The project includes:
+The website showcases:
 
-- React + TypeScript
-- Reusable UI Components
+- Basic Information
+- Work / Projects
+- Skills
+- Learning Resources
+- Developer Setup
+
+The project also demonstrates CI/CD practices, Docker deployment, and production hosting using Nginx.
+
+---
+
+# Technologies Used
+
+- React
+- TypeScript
+- React Router
+- CSS
+- Docker
+- Nginx
 - ESLint
 - Prettier
-- Husky Pre-Commit Hooks
-- Jest & React Testing Library
-- GitHub Actions CI Workflow
-- Docker
-- Nginx Production Server
+- Husky
+- Jest
+- GitHub Actions
 
 ---
 
 # Prerequisites
 
-Before running the project, make sure you have installed:
+Before running the project, install:
 
 - Node.js
 - npm
@@ -52,69 +66,17 @@ npm install
 
 ---
 
-# Start Development Server
+# Run Development Server
 
 ```bash
 npm start
 ```
 
-The application will open at:
+Open:
 
 ```
 http://localhost:3000
 ```
-
----
-
-# Run Tests
-
-```bash
-npm test
-```
-
-Run tests once:
-
-```bash
-npm test -- --watchAll=false
-```
-
----
-
-# Run ESLint
-
-```bash
-npm run lint
-```
-
----
-
-# Run Prettier Check
-
-```bash
-npm run format:check
-```
-
----
-
-# Format Source Code
-
-```bash
-npm run format
-```
-
----
-
-# Run All Quality Checks
-
-```bash
-npm run quality
-```
-
-This command runs:
-
-- ESLint
-- Prettier
-- Tests
 
 ---
 
@@ -129,7 +91,7 @@ npm run build
 # Build Docker Image
 
 ```bash
-docker build -t dhaliwal_jasmail_coding_assignment13 .
+docker build -t dhaliwal_jasmail_assignment14 .
 ```
 
 ---
@@ -137,7 +99,7 @@ docker build -t dhaliwal_jasmail_coding_assignment13 .
 # Run Docker Container
 
 ```bash
-docker run --name dhaliwal_jasmail_coding_assignment13 -p 8018:8018 dhaliwal_jasmail_coding_assignment13
+docker run -d -p 5575:80 --name dhaliwal_jasmail_coding_assignment14 dhaliwal_jasmail_assignment14
 ```
 
 ---
@@ -150,10 +112,10 @@ docker ps
 
 ---
 
-# Stop Docker Container
+# Stop Container
 
 ```bash
-docker stop dhaliwal_jasmail_coding_assignment13
+docker stop dhaliwal_jasmail_coding_assignment14
 ```
 
 ---
@@ -161,15 +123,15 @@ docker stop dhaliwal_jasmail_coding_assignment13
 # Start Existing Container
 
 ```bash
-docker start dhaliwal_jasmail_coding_assignment13
+docker start dhaliwal_jasmail_coding_assignment14
 ```
 
 ---
 
-# Remove Docker Container
+# Remove Container
 
 ```bash
-docker rm dhaliwal_jasmail_coding_assignment13
+docker rm dhaliwal_jasmail_coding_assignment14
 ```
 
 ---
@@ -177,8 +139,38 @@ docker rm dhaliwal_jasmail_coding_assignment13
 # Remove Docker Image
 
 ```bash
-docker rmi dhaliwal_jasmail_coding_assignment13
+docker rmi dhaliwal_jasmail_assignment14
 ```
+
+---
+
+# Open Portfolio Website
+
+After running the Docker container, open:
+
+```
+http://localhost:5575
+```
+
+---
+
+# Project Features
+
+- Multi-page React Portfolio Website
+- React Router Navigation
+- Responsive Layout
+- Basic Information Section
+- Work / Projects Section
+- Skills Section
+- Learning Resources Section
+- Developer Setup Section
+- Dockerized Production Build
+- Nginx Production Server
+- ESLint
+- Prettier
+- Husky
+- Jest Testing
+- GitHub Actions CI/CD
 
 ---
 
@@ -199,7 +191,7 @@ git add .
 Commit changes:
 
 ```bash
-git commit -m "Updated project"
+git commit -m "Complete Coding Assignment 14"
 ```
 
 Push changes:
@@ -212,26 +204,36 @@ git push origin main
 
 # GitHub Repository
 
+Replace the link below with your repository if it changes.
+
+```
 https://github.com/Jasmail-rrc/dhaliwal_jasmail_ui_garden
+```
 
 ---
 
-# Docker Application
+# Docker Information
 
-After running the container, open:
+- Docker Image:
 
-http://localhost:8018
+```
+dhaliwal_jasmail_assignment14
+```
 
----
+- Docker Container:
 
-# Project Features
+```
+dhaliwal_jasmail_coding_assignment14
+```
 
-- Reusable React Components
-- TypeScript Support
-- ESLint Code Quality
-- Prettier Formatting
-- Husky Pre-Commit Validation
-- Automated Unit Testing
-- GitHub Actions Continuous Integration
-- Dockerized Deployment
-- Nginx Production Server
+- Working Directory inside Docker:
+
+```
+/dhaliwal_jasmail_final_site
+```
+
+- Application URL:
+
+```
+http://localhost:5575
+```
